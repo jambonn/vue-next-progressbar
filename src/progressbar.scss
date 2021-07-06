@@ -1,6 +1,6 @@
-[id='vue-progressbar'] {
+[id='v-progressbar'] {
   pointer-events: none;
-  .bar {
+  .v-p-bar {
     position: fixed;
     top: 0;
     left: 0;
@@ -9,7 +9,7 @@
     background: #29d;
     z-index: 1031;
   }
-  .peg {
+  .v-p-peg {
     display: block;
     position: absolute;
     right: 0;
@@ -19,14 +19,14 @@
     opacity: 1;
     transform: rotate(3deg) translate(0px, -4px);
   }
-  .spinner {
+  .v-p-spinner {
     display: block;
     position: fixed;
     top: 15px;
     right: 15px;
     z-index: 1031;
   }
-  .spinner-icon {
+  .v-p-spinner-icon {
     width: 18px;
     height: 18px;
     box-sizing: border-box;
@@ -34,11 +34,11 @@
     border-top-color: #29d;
     border-left-color: #29d;
     border-radius: 50%;
-    animation: vue-progressbar-spinner .4s linear infinite;
+    animation: progressbarSpinner .4s linear infinite;
   }
 }
 
-@keyframes vue-progressbar-spinner {
+@keyframes progressbarSpinner {
   0%   { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }

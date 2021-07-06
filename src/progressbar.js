@@ -84,14 +84,14 @@ const Progressbar = () => {
     return Progressbar.inc(Math.random() * 0.02);
   };
   Progressbar.render = (fromStart) => {
-    if (document.getElementById('vue-progressbar')) {
-      return document.getElementById('vue-progressbar');
+    if (document.getElementById('v-progressbar')) {
+      return document.getElementById('v-progressbar');
     }
 
     const progress = document.createElement('div');
-    progress.id = 'vue-progressbar';
+    progress.id = 'v-progressbar';
     progress.innerHTML =
-      '<div class="bar" role="bar"><div class="peg"></div></div><div class="spinner" role="spinner"><div class="spinner-icon"></div></div>';
+      '<div class="v-p-bar" role="bar"><div class="v-p-peg"></div></div><div class="v-p-spinner" role="spinner"><div class="v-p-spinner-icon"></div></div>';
 
     const bar = progress.querySelector('[role="bar"]');
     const perc = fromStart ? '-100' : toBarPerc(Progressbar.status || 0);
@@ -105,7 +105,7 @@ const Progressbar = () => {
     return progress;
   };
   Progressbar.remove = () => {
-    const progress = document.getElementById('vue-progressbar');
+    const progress = document.getElementById('v-progressbar');
     progress && removeElement(progress);
   };
 
