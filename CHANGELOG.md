@@ -1,3 +1,12 @@
+## [0.1.2](https://github.com/jambonn/vue-next-progressbar/compare/v0.1.1...v0.1.2) (2021-07-06)
+
+
+### Features
+
+* add config default show progress when router change ([a514a52](https://github.com/jambonn/vue-next-progressbar/commit/a514a52125e6c5f0ad9cfbe76e6cf28557bcd199))
+
+
+
 ## [0.1.1](https://github.com/jambonn/vue-next-progressbar/compare/v0.1.0...v0.1.1) (2021-07-06)
 
 

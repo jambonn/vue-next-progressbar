@@ -161,9 +161,10 @@ export default {
       return new Error('Vue version at least 3.0');
     }
 
+    const config = Object.assign({ router: true }, options);
     const global = app.config.globalProperties;
     global.$Progressbar = VueProgressbar;
-    if (options.router && typeof window !== 'undefined' && global.$router) {
+    if (config.router && typeof window !== 'undefined' && global.$router) {
       global.$router.beforeEach(() => {
         global.$Progressbar.start();
       });
