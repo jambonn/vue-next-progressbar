@@ -1,0 +1,15 @@
+.npmignore
+.gitignore
+.eslintrc
+.eslintrc
+.idea
+.prettierrc
+
+node_modules/
+package-lock.json
+yarn.lock
+npm-debug.log
+yarn-error.log
+
+*.test.js
+.travis.yml
