@@ -88,8 +88,6 @@ const Progressbar = () => {
       return document.getElementById('vue-progressbar');
     }
 
-    addClass(document.documentElement, 'vue-progressbar-busy');
-
     const progress = document.createElement('div');
     progress.id = 'vue-progressbar';
     progress.innerHTML =
@@ -97,26 +95,16 @@ const Progressbar = () => {
 
     const bar = progress.querySelector('[role="bar"]');
     const perc = fromStart ? '-100' : toBarPerc(Progressbar.status || 0);
-    const parent = document.querySelector('body');
 
     css(bar, {
       transition: 'all 0 linear',
       transform: `translate3d(${perc}%,0,0)`,
     });
 
-    if (parent !== document.body) {
-      addClass(parent, 'vue-progressbar-custom-parent');
-    }
-
-    parent.appendChild(progress);
+    document.querySelector('body').appendChild(progress);
     return progress;
   };
   Progressbar.remove = () => {
-    removeClass(document.documentElement, 'vue-progressbar-busy');
-    removeClass(
-      document.querySelector('body'),
-      'vue-progressbar-custom-parent'
-    );
     const progress = document.getElementById('vue-progressbar');
     progress && removeElement(progress);
   };
@@ -153,37 +141,6 @@ const Progressbar = () => {
       });
     };
   })();
-  const hasClass = (element, name) => {
-    var list = typeof element == 'string' ? element : classList(element);
-    return list.indexOf(' ' + name + ' ') >= 0;
-  };
-  const addClass = (element, name) => {
-    var oldList = classList(element),
-      newList = oldList + name;
-
-    if (hasClass(oldList, name)) return;
-
-    // Trim the opening space.
-    element.className = newList.substring(1);
-  };
-  const removeClass = (element, name) => {
-    var oldList = classList(element),
-      newList;
-
-    if (!hasClass(element, name)) return;
-
-    // Replace the class name.
-    newList = oldList.replace(' ' + name + ' ', ' ');
-
-    // Trim the opening and closing spaces.
-    element.className = newList.substring(1, newList.length - 1);
-  };
-  const classList = (element) => {
-    return (' ' + ((element && element.className) || '') + ' ').replace(
-      /\s+/gi,
-      ' '
-    );
-  };
   const removeElement = (element) => {
     element && element.parentNode && element.parentNode.removeChild(element);
   };

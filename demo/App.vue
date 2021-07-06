@@ -166,7 +166,7 @@ b {
 }
 @media (min-width: 480px) {
   .controls {
-    text-align: center;
+    max-width: 380px;
   }
 }
 .controls i {

@@ -1,4 +1,3 @@
-/* Make clicks pass-through */
 [id='vue-progressbar'] {
   pointer-events: none;
   .bar {
@@ -10,7 +9,6 @@
     background: #29d;
     z-index: 1031;
   }
-  /* Fancy blur effect */
   .peg {
     display: block;
     position: absolute;
@@ -21,7 +19,6 @@
     opacity: 1;
     transform: rotate(3deg) translate(0px, -4px);
   }
-  /* Remove these to get rid of the spinner */
   .spinner {
     display: block;
     position: fixed;
@@ -38,17 +35,6 @@
     border-left-color: #29d;
     border-radius: 50%;
     animation: vue-progressbar-spinner .4s linear infinite;
-  }
-}
-
-.vue-progressbar-custom-parent {
-  overflow: hidden;
-  position: relative;
-  [id='vue-progressbar'] {
-    .spinner,
-    .bar {
-      position: absolute;
-    }
   }
 }
 
