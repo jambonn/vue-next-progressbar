@@ -1,0 +1,74 @@
+{
+  "name": "@jambonn/vue-next-progressbar",
+  "version": "0.0.1",
+  "description": "Slim progress bars for Vue 3.",
+  "keywords": [
+    "vue",
+    "vue 3",
+    "vue-next-progressbar",
+    "vue 3 loading progress",
+    "vue 3 progressbar",
+    "progressbar"
+  ],
+  "homepage": "",
+  "bugs": {
+    "url": "https://github.com/jambonn/vue-inline-svg/issues"
+  },
+  "license": "MIT",
+  "author": "Jambon <hoaeuro93@gmail.com>",
+  "scripts": {
+    "dev": "vite",
+    "build:demo": "NODE_ENV=production vite build --mode demo",
+    "build:lib": "NODE_ENV=production vite build --mode lib && yarn build:scss",
+    "build:scss": "sass src/progressbar.scss > lib/vue-next-progressbar.css && cleancss -o lib/vue-next-progressbar.min.css lib/vue-next-progressbar.css",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 1",
+    "serve": "vite preview"
+  },
+  "main": "lib/vue-next-progressbar.cjs.js",
+  "browser": "lib/vue-next-progressbar.es.js",
+  "module": "lib/vue-next-progressbar.es.js",
+  "unpkg": "lib/vue-next-progressbar.umd.js",
+  "style": "lib/vue-next-progressbar.min.css",
+  "files": [
+    "lib"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.2.3",
+    "@vue/compiler-sfc": "^3.0.5",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "chalk": "^4.1.1",
+    "clean-css-cli": "^5.3.0",
+    "conventional-changelog-cli": "^2.1.1",
+    "enquirer": "^2.3.6",
+    "eslint": "^7.30.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-vue": "^7.12.1",
+    "execa": "^5.1.1",
+    "lint-staged": "^11.0.0",
+    "minimist": "^1.2.5",
+    "prettier": "^2.3.2",
+    "sass": "^1.35.1",
+    "semver": "^7.3.5",
+    "vite": "^2.3.8",
+    "vue": "^3.1.4",
+    "vue-router": "^4.0.10"
+  },
+  "peerDependencies": {
+    "vue": "^3.1.4"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged",
+    "commit-msg": "node scripts/verifyCommit.js"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write"
+    ]
+  },
+  "engines": {
+    "node": ">=14.17.1"
+  }
+}
