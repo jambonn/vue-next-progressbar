@@ -1,3 +1,12 @@
+## [0.1.3](https://github.com/jambonn/vue-next-progressbar/compare/v0.1.2...v0.1.3) (2021-07-08)
+
+
+### Features
+
+* remove spinner ([e306967](https://github.com/jambonn/vue-next-progressbar/commit/e306967fe2198ee916a8f5d735a23c2f02541fde))
+
+
+
 ## [0.1.2](https://github.com/jambonn/vue-next-progressbar/compare/v0.1.1...v0.1.2) (2021-07-06)
 
 
