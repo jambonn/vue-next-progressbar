@@ -9,7 +9,7 @@ const Progressbar = () => {
     Progressbar.status = n === 1 ? null : n;
 
     const progress = Progressbar.render(!started);
-    const bar = progress.querySelector('[role="bar"]');
+    const bar = progress.querySelector('.v-p-bar');
     const speed = 200;
 
     progress.offsetWidth; /* Repaint */
@@ -91,9 +91,9 @@ const Progressbar = () => {
     const progress = document.createElement('div');
     progress.id = 'v-progressbar';
     progress.innerHTML =
-      '<div class="v-p-bar" role="bar"><div class="v-p-peg"></div></div><div class="v-p-spinner" role="spinner"><div class="v-p-spinner-icon"></div></div>';
+      '<div class="v-p-bar"><div class="v-p-peg"></div></div>';
 
-    const bar = progress.querySelector('[role="bar"]');
+    const bar = progress.querySelector('.v-p-bar');
     const perc = fromStart ? '-100' : toBarPerc(Progressbar.status || 0);
 
     css(bar, {

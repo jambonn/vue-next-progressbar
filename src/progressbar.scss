@@ -19,26 +19,4 @@
     opacity: 1;
     transform: rotate(3deg) translate(0px, -4px);
   }
-  .v-p-spinner {
-    display: block;
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    z-index: 1031;
-  }
-  .v-p-spinner-icon {
-    width: 18px;
-    height: 18px;
-    box-sizing: border-box;
-    border: 2px solid transparent;
-    border-top-color: #29d;
-    border-left-color: #29d;
-    border-radius: 50%;
-    animation: progressbarSpinner .4s linear infinite;
-  }
-}
-
-@keyframes progressbarSpinner {
-  0%   { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
 }
