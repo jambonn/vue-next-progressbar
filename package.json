@@ -1,6 +1,6 @@
 {
   "name": "@jambonn/vue-next-progressbar",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Slim progress bars for Vue 3.",
   "keywords": [
     "vue",
