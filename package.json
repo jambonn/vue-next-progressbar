@@ -1,6 +1,6 @@
 {
   "name": "@jambonn/vue-next-progressbar",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Slim progress bars for Vue 3.",
   "keywords": [
     "vue",
@@ -12,7 +12,11 @@
   ],
   "homepage": "https://vue-next-progressbar.vercel.app/",
   "bugs": {
-    "url": "https://github.com/jambonn/vue-inline-svg/issues"
+    "url": "https://github.com/jambonn/vue-next-progressbar/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jambonn/vue-next-progressbar.git"
   },
   "license": "MIT",
   "author": "Jambon <hoaeuro93@gmail.com>",
@@ -70,6 +74,6 @@
     ]
   },
   "engines": {
-    "node": ">=14.17.1"
+    "node": ">=14.x"
   }
 }

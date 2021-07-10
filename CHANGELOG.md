@@ -1,3 +1,7 @@
+## [0.1.4](https://github.com/jambonn/vue-next-progressbar/compare/v0.1.3...v0.1.4) (2021-07-10)
+
+
+
 ## [0.1.3](https://github.com/jambonn/vue-next-progressbar/compare/v0.1.2...v0.1.3) (2021-07-08)
 
 
