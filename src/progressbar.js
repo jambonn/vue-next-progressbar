@@ -1,6 +1,12 @@
 const Progressbar = () => {
   const Progressbar = {
     status: null,
+    settings: {
+      trickleSpeed: 800,
+    },
+  };
+  Progressbar.configure = (options) => {
+    Progressbar.settings = Object.assign({}, Progressbar.settings, options);
   };
   Progressbar.set = (n) => {
     const started = typeof Progressbar.status === 'number';
@@ -57,7 +63,7 @@ const Progressbar = () => {
 
         Progressbar.trickle();
         work();
-      }, 800);
+      }, Progressbar.settings.trickleSpeed);
     };
 
     work();
@@ -71,9 +77,21 @@ const Progressbar = () => {
 
     if (!n) {
       return Progressbar.start();
+    } else if (n > 1) {
+      return () => {};
     } else {
       if (typeof amount !== 'number') {
-        amount = (1 - n) * clamp(Math.random() * n, 0.1, 0.95);
+        if (n >= 0 && n < 0.2) {
+          amount = 0.1;
+        } else if (n >= 0.2 && n < 0.5) {
+          amount = 0.04;
+        } else if (n >= 0.5 && n < 0.8) {
+          amount = 0.02;
+        } else if (n >= 0.8 && n < 0.99) {
+          amount = 0.005;
+        } else {
+          amount = 0;
+        }
       }
 
       n = clamp(n + amount, 0, 0.994);
@@ -81,7 +99,7 @@ const Progressbar = () => {
     }
   };
   Progressbar.trickle = () => {
-    return Progressbar.inc(Math.random() * 0.02);
+    return Progressbar.inc();
   };
   Progressbar.render = (fromStart) => {
     if (document.getElementById('v-progressbar')) {
@@ -163,6 +181,7 @@ export default {
 
     const config = Object.assign({ router: true }, options);
     const global = app.config.globalProperties;
+    VueProgressbar.configure(options);
     global.$Progressbar = VueProgressbar;
     if (config.router && typeof window !== 'undefined' && global.$router) {
       global.$router.beforeEach(() => {
