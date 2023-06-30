@@ -1,3 +1,12 @@
+## [0.1.5](https://github.com/jambonn/vue-next-progressbar/compare/v0.1.4...v0.1.5) (2023-06-30)
+
+
+### Features
+
+* add option trickleSpeed ([c093f4f](https://github.com/jambonn/vue-next-progressbar/commit/c093f4f9d5d36cebf827bdff6c8c012c7cae27b4))
+
+
+
 ## [0.1.4](https://github.com/jambonn/vue-next-progressbar/compare/v0.1.3...v0.1.4) (2021-07-10)
 
 
