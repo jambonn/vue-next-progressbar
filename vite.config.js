@@ -37,6 +37,11 @@ export default ({ command, mode }) => {
         entry: path.resolve(__dirname, 'src/progressbar.js'),
         name: 'VueNextProgressbar',
         formats: ['es', 'cjs', 'umd'],
+        fileName: (format) => {
+          const name = `vue-next-progressbar.${format}`;
+          const extension = format === 'es' ? 'mjs' : 'js';
+          return `${name}.${extension}`;
+        },
       },
     };
   }
