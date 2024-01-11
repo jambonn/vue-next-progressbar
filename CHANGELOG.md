@@ -1,3 +1,12 @@
+## [0.1.7](https://github.com/jambonn/vue-next-progressbar/compare/v0.1.6...v0.1.7) (2024-01-11)
+
+
+### Features
+
+* bump minimum node version to 16 ([093f7fc](https://github.com/jambonn/vue-next-progressbar/commit/093f7fc292659527630a082aedb37d94025c9684))
+
+
+
 ## [0.1.6](https://github.com/jambonn/vue-next-progressbar/compare/v0.1.5...v0.1.6) (2024-01-11)
 
 
