@@ -30,8 +30,8 @@
     "serve": "vite preview"
   },
   "main": "lib/vue-next-progressbar.cjs.js",
-  "browser": "lib/vue-next-progressbar.es.js",
-  "module": "lib/vue-next-progressbar.es.js",
+  "browser": "lib/vue-next-progressbar.es.mjs",
+  "module": "lib/vue-next-progressbar.es.mjs",
   "unpkg": "lib/vue-next-progressbar.umd.js",
   "style": "lib/vue-next-progressbar.min.css",
   "files": [
@@ -57,7 +57,7 @@
     "prettier": "^2.3.2",
     "sass": "^1.35.1",
     "semver": "^7.3.5",
-    "vite": "^2.3.8",
+    "vite": "^5.0.11",
     "vue": "^3.1.4",
     "vue-router": "^4.0.10"
   },
