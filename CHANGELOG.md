@@ -1,3 +1,12 @@
+## [0.1.6](https://github.com/jambonn/vue-next-progressbar/compare/v0.1.5...v0.1.6) (2024-01-11)
+
+
+### Bug Fixes
+
+* **build:** update extension for es format ([e73cc98](https://github.com/jambonn/vue-next-progressbar/commit/e73cc9820a5571c347333c98e1b9b0d3fd709387))
+
+
+
 ## [0.1.5](https://github.com/jambonn/vue-next-progressbar/compare/v0.1.4...v0.1.5) (2023-06-30)
 
 
