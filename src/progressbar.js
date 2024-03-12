@@ -69,8 +69,10 @@ const Progressbar = () => {
     work();
   };
   Progressbar.done = () => {
-    Progressbar.inc(0.3 + 0.5 * Math.random());
-    Progressbar.set(1);
+    setTimeout(() => {
+      Progressbar.inc(0.3 + 0.5 * Math.random());
+      Progressbar.set(1);
+    }, 1000);
   };
   Progressbar.inc = (amount) => {
     let n = Progressbar.status;
