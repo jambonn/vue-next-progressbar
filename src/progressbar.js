@@ -3,6 +3,7 @@ const Progressbar = () => {
     status: null,
     settings: {
       trickleSpeed: 800,
+      skipFirstLoad: false,
     },
   };
   Progressbar.configure = (options) => {
@@ -182,12 +183,20 @@ export default {
     const config = Object.assign({ router: true }, options);
     const global = app.config.globalProperties;
     VueProgressbar.configure(options);
+    let isFirstTime = VueProgressbar.settings.skipFirstLoad;
     global.$Progressbar = VueProgressbar;
     if (config.router && typeof window !== 'undefined' && global.$router) {
       global.$router.beforeEach(() => {
+        if (isFirstTime) {
+          return;
+        }
         global.$Progressbar.start();
       });
       global.$router.afterEach(() => {
+        if (isFirstTime) {
+          isFirstTime = false;
+          return;
+        }
         global.$Progressbar.done();
       });
     }
