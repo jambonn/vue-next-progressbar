@@ -1,3 +1,12 @@
+## [0.1.9](https://github.com/jambonn/vue-next-progressbar/compare/v0.1.8...v0.1.9) (2024-03-20)
+
+
+### Features
+
+* add option skip first load ([6c3218e](https://github.com/jambonn/vue-next-progressbar/commit/6c3218e581da0dfee69a9a85bf21dcb49b046fd9))
+
+
+
 ## [0.1.8](https://github.com/jambonn/vue-next-progressbar/compare/v0.1.7...v0.1.8) (2024-01-22)
 
 
